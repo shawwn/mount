@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ "$EUID" -ne 0 ] && [ "${FORCE:-0}" -eq 0 ]
 then cat <<'EOF'
 You're not running as root. Run `sudo su` followed by `./setup.sh` and try this

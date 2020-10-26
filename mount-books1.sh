@@ -1,1 +1,1 @@
-bash mount.sh books1
+exec bash mount.sh books1
