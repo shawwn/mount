@@ -32,6 +32,8 @@ sudo su # switch to root; see warning above
 # the 35GB books3 dataset is now mounted as ./books3/books3
 
 # the smaller bookcorpus dataset is now mounted as ./books1/books1
+
+# total disk usage is less than 1GB
 ```
 
 Afterwards, you can do things like:
