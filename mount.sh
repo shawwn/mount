@@ -26,10 +26,8 @@ function get () {
 	ratarmount https/the-eye.eu/public/AI/pile_preliminary_components/${books}.tar.gz.. "./${books}" --index-file ${books}.tar.gz.index.sqlite
 }
 
-# shut down the mount points in reverse order.
-umount -f books3; rmdir books3
-umount -f books1; rmdir books1
-umount -f https; rmdir https
+# shut down the mount points.
+./unmount.sh
 
 set -ex
 
