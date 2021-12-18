@@ -41,8 +41,14 @@ cat ./https/example.com..
 # get knowledge.
 if [ -z "$1" ]
 then
-  get books1
-  get books3
+  # get books1
+  # get books3
+  for books in books1 books3
+  do
+    [ ! -f ${books}.tar.gz.index.sqlite ] && wget https://battle.shawwn.com/${books}.tar.gz.index.sqlite
+  done
+	ratarmount http/test.tensorfork.com:1234/books1.tar.gz.. "./books1" --index-file books1.tar.gz.index.sqlite
+	ratarmount http/test.tensorfork.com:1234/books3/epub/books3.tar.gz.. "./books3" --index-file books3.tar.gz.index.sqlite
 else
   get "$1"
 fi
