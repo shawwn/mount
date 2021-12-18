@@ -31,6 +31,10 @@ function get () {
 
 set -ex
 
+# mount the HTTP network drive.
+mkdir -p http
+python3 -m simple_httpfs ./http
+
 # mount the HTTPS network drive.
 mkdir -p https
 python3 -m simple_httpfs ./https
